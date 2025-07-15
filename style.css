@@ -1,1 +1,95 @@
+body {
+  font-family: 'Arapey', serif;
+  background-color: #ffeef4;
+  margin: 0;
+  padding: 2rem;
+  color: #333;
+}
 
+.titulo {
+  font-family: 'Sawarabi Mincho', serif;
+  text-align: center;
+  color: #d96c94;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.acciones {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+#resetBtn {
+  background-color: #f7b6d4;
+  color: white;
+  font-size: 1rem;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#resetBtn:hover {
+  background-color: #e493bb;
+}
+
+.semestres {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.semestre {
+  background-color: #fff0f6;
+  border: 2px solid #f7cde3;
+  padding: 1rem;
+  border-radius: 8px;
+  width: 300px;
+  transition: transform 0.3s;
+}
+
+.semestre:hover {
+  transform: scale(1.01);
+}
+
+.semestre h2 {
+  text-align: center;
+  color: #cc5b86;
+}
+
+.ramo {
+  background-color: #f9d8e7;
+  padding: 0.5rem;
+  margin: 0.3rem 0;
+  border-radius: 6px;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.ramo.locked {
+  background-color: #f3c1da;
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.ramo.unlocked:hover {
+  transform: scale(1.02);
+  background-color: #e9accb;
+}
+
+.ramo.approved {
+  background-color: #f185b7;
+  color: white;
+}
+
+.ramo.approved::after {
+  content: "✔";
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: bold;
+}
